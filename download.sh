@@ -26,7 +26,9 @@ echo "\nSUCCESSFULLY DOWNLOADED DATA FROM CLIMATE CANADA!"
 
 echo "STARTING PYTHON SCRIPT TO PROCESS DATA... ON ${hostname}..."
 
-python concat.py
+#cd "/Users/yangliu/Desktop/Data Engineering/Linux/learning/climate_folder/script"
+
+python "/Users/yangliu/Desktop/Data Engineering/Linux/learning/climate_folder/script/concat.py"
 
 RC1=$?
 if [ $RC1 -ne 0 ]; then
@@ -39,7 +41,8 @@ fi
 echo "SUCCESSFULLY PROCESSED DATA!"
 
 echo "REMOVING DOWNLOADED FILES..."
-rm *.csv
+
+
 echo "END RUNNING PROCESS"
 
 echo "PROCESS END AT $(date +"%m%d%Y%H%M%S")"
