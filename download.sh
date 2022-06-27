@@ -2,7 +2,7 @@
 
 export DOCDIR='/Users/yangliu/Desktop/Data Engineering/Linux/learning/climate_folder/docs'
 export LOGDIR='/Users/yangliu/Desktop/Data Engineering/Linux/learning/climate_folder/logs'
-
+export PYTHON_SCRIPT="/Users/yangliu/Desktop/Data Engineering/Linux/learning/climate_folder/script/concat.py"
 filenametime1=$(date +"%m%d%Y%H%M%S")
 
 exec > >(tee ${LOGDIR}/script_${filenametime1}.log)
@@ -28,7 +28,7 @@ echo "STARTING PYTHON SCRIPT TO PROCESS DATA... ON ${hostname}..."
 
 #cd "/Users/yangliu/Desktop/Data Engineering/Linux/learning/climate_folder/script"
 
-python "/Users/yangliu/Desktop/Data Engineering/Linux/learning/climate_folder/script/concat.py"
+python PYTHON_SCRIPT
 
 RC1=$?
 if [ $RC1 -ne 0 ]; then
