@@ -14,4 +14,3 @@ data= pd.concat(my_list)
 
 data.to_csv('/Users/yangliu/Desktop/Data Engineering/Linux/learning/climate_folder/docs/three_years.csv')
 
-#print("world")

@@ -24,11 +24,11 @@ fi
 
 echo "\nSUCCESSFULLY DOWNLOADED DATA FROM CLIMATE CANADA!"
 
-echo "STARTING PYTHON SCRIPT TO PROCESS DATA... ON ${hostname}..."
+echo "STARTING PYTHON SCRIPT TO PROCESS DATA... ON $(hostname)..."
 
 #cd "/Users/yangliu/Desktop/Data Engineering/Linux/learning/climate_folder/script"
 
-python PYTHON_SCRIPT
+python $PYTHON_SCRIPT
 
 RC1=$?
 if [ $RC1 -ne 0 ]; then
